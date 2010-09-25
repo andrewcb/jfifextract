@@ -1,0 +1,8 @@
+jfifextract is a program which goes through a block of data (such as the image of a memory card or disk), finds spans that look like JPEG/JFIF image files and extracts them to files in a user-specified directory. It was developed to aid in recovering photos from a corrupted memory card. jfifextract uses memory-mapped I/O, making it reasonably efficient in handling large volume images. It should compile on any modern POSIX machine, though has only been tested on Linux.
+
+jfifextract accepts a number of options: 
+  -o is used to specify the output directory into which recovered files are written. 
+  -d tells jfifextract not to write any files, but only to report on JFIF-like spans found. 
+  -v tells it to print messages as it writes files.
+
+jfifextract is a very primitive quick-and-dirty hack. It uses next to no knowledge of the JFIF/JPEG image format (it defines a "JFIF file" as anything between two magic numbers as found at the start of a JFIF file).
